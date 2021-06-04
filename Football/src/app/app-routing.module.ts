@@ -13,6 +13,9 @@ const routes: Routes = [
       {path:'team/:id', component: OneTeamPageComponent},
       {path: 'favorites', component: FavoritesPageComponent}
     ]
+  },
+  {
+    path: 'admin' , loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
   }
 
 ];
