@@ -7,6 +7,7 @@ import { MainLayoutComponent } from './shared/main-layout/main-layout.component'
 import { MainPageComponent } from './main-page/main-page.component';
 import { OneTeamPageComponent } from './one-team-page/one-team-page.component';
 import { FavoritesPageComponent } from './favorites-page/favorites-page.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FavoritesPageComponent } from './favorites-page/favorites-page.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
