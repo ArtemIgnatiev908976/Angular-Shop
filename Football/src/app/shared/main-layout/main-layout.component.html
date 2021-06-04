@@ -1,2 +1,14 @@
-<p>main-layout works!</p>
+<nav class="navbar bg-dark">
+  <h2>UEFA</h2>
+  <ul>
+    <li routerLinkActive="active"><a href="">Евро чемпионаты</a></li>
+    <li routerLinkActive="active"><a href="">Лига Чемпионов</a></li>
+    <li routerLinkActive="active"><a href="">Лига Европы</a></li>
+    <li routerLinkActive="active"><a href="">Лига Конференций</a></li>
+    <li routerLinkActive="active"><a [routerLink]="['/favorites']" >Избранное</a></li>
+
+
+
+  </ul>
+</nav>
 <router-outlet></router-outlet>
