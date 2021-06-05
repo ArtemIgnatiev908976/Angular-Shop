@@ -2,16 +2,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {MainLayoutComponent} from "./shared/main-layout/main-layout.component";
 import {MainPageComponent} from "./main-page/main-page.component";
-import {OneTeamPageComponent} from "./one-team-page/one-team-page.component";
-import {FavoritesPageComponent} from "./favorites-page/favorites-page.component";
+import {ProductPageComponent} from "./product-page/product-page.component";
+import {CartPageComponent} from "./cart-page/cart-page.component";
 
 const routes: Routes = [
   {
     path: '', component: MainLayoutComponent, children:[
       {path:'', redirectTo:'/', pathMatch: 'full'},
       {path:'', component: MainPageComponent},
-      {path:'team/:id', component: OneTeamPageComponent},
-      {path: 'favorites', component: FavoritesPageComponent}
+      {path:'product/:id', component: ProductPageComponent},
+      {path: 'cart', component: CartPageComponent}
     ]
   },
   {

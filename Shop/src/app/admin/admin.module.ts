@@ -6,7 +6,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { AddPageComponent } from './add-page/add-page.component';
 import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 import { EditPageComponent } from './edit-page/edit-page.component';
-import { FavoritesUserPageComponent } from './favorites-user-page/favorites-user-page.component';
+import { OrdersPageComponent } from './orders-page/orders-page.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AuthGuard} from "../shared/auth.guard";
 
@@ -21,8 +21,8 @@ import {AuthGuard} from "../shared/auth.guard";
         {path: 'login', component: LoginPageComponent},
         {path: 'dashboard', component: DashboardPageComponent, canActivate:[AuthGuard]},
         {path: 'add', component: AddPageComponent, canActivate:[AuthGuard]},
-        {path: 'favorites-user-page', component: FavoritesUserPageComponent, canActivate:[AuthGuard]},
-        {path: 'team/:id/edit', component: EditPageComponent, canActivate:[AuthGuard]},
+        {path: 'orders-page', component: OrdersPageComponent, canActivate:[AuthGuard]},
+        {path: 'product/:id/edit', component: EditPageComponent, canActivate:[AuthGuard]},
 
       ]
     }])
@@ -34,7 +34,7 @@ import {AuthGuard} from "../shared/auth.guard";
     AddPageComponent,
     DashboardPageComponent,
     EditPageComponent,
-    FavoritesUserPageComponent
+    OrdersPageComponent
   ]
 })
 export class AdminModule{
