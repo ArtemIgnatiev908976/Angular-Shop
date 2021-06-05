@@ -8,6 +8,7 @@ import { DashboardPageComponent } from './dashboard-page/dashboard-page.componen
 import { EditPageComponent } from './edit-page/edit-page.component';
 import { FavoritesUserPageComponent } from './favorites-user-page/favorites-user-page.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {AuthGuard} from "../shared/auth.guard";
 
 @NgModule({
   imports:[
@@ -18,10 +19,10 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
       path: '', component: AdminLayoutComponent, children: [
         {path: '', redirectTo:'/admin/login', pathMatch: 'full'},
         {path: 'login', component: LoginPageComponent},
-        {path: 'dashboard', component: DashboardPageComponent},
-        {path: 'add', component: AddPageComponent},
-        {path: 'favorites-user-page', component: FavoritesUserPageComponent},
-        {path: 'team/:id/edit', component: EditPageComponent},
+        {path: 'dashboard', component: DashboardPageComponent, canActivate:[AuthGuard]},
+        {path: 'add', component: AddPageComponent, canActivate:[AuthGuard]},
+        {path: 'favorites-user-page', component: FavoritesUserPageComponent, canActivate:[AuthGuard]},
+        {path: 'team/:id/edit', component: EditPageComponent, canActivate:[AuthGuard]},
 
       ]
     }])

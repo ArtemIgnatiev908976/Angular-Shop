@@ -1,13 +1,20 @@
 <nav class="navbar bg-dark">
   <h1><a routerLink="/"></a>Admin UEFA</h1>
 
-  <ul>
+  <ul *ngIf ="auth.isAuthenticated(); else login">
     <li routerLinkActive="active"><a [routerLink]="['/admin', 'dashboard']" >Dashboard</a></li>
     <li routerLinkActive="active"><a [routerLink]="['/admin', 'add']" >Add Team</a></li>
     <li routerLinkActive="active"><a [routerLink]="['/admin', 'favorites-user-page']" >Favorites</a></li>
     <li routerLinkActive="active"><a href="#" (click)="logout($event)" > Logout</a></li>
-    <li routerLinkActive="active"><a [routerLink]="['/admin', 'login']" >Login</a></li>
+
   </ul>
+  <ng-template #login>
+    <ul>
+      <li routerLinkActive="active"><a [routerLink]="['/admin', 'login']" >Login</a></li>
+    </ul>
+
+  </ng-template>
+
 </nav>
 
 
