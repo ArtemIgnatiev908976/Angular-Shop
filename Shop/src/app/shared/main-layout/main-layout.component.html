@@ -1,11 +1,10 @@
 <nav class="navbar bg-dark">
   <h2>Shop</h2>
   <ul>
-    <li routerLinkActive="active"><a href="">Евро чемпионаты</a></li>
-    <li routerLinkActive="active"><a href="">Лига Чемпионов</a></li>
-    <li routerLinkActive="active"><a href="">Лига Европы</a></li>
-    <li routerLinkActive="active"><a href="">Лига Конференций</a></li>
-    <li routerLinkActive="active"><a [routerLink]="['/cart']" >Избранное</a></li>
+    <li routerLinkActive="active"><a (click)="setType('Phone')">Phone</a></li>
+    <li routerLinkActive="active"><a (click)="setType('Tablet')">Tablet</a></li>
+    <li routerLinkActive="active"><a (click)="setType('Laptop')">Laptop</a></li>
+    <li routerLinkActive="active"><a [routerLink]="['/cart']" >Cart</a></li>
 
 
 
