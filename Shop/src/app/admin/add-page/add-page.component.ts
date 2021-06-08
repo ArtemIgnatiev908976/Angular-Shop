@@ -43,7 +43,7 @@ this.submitted = true
     }
 
     console.log(this.form)
-    this.productServ.create(product).subscribe(res => console.log(res=>{
+    this.productServ.create(product).subscribe((res=>{
       this.form.reset()
       this.submitted=false
       this.router.navigate(['/'])

@@ -2,6 +2,10 @@
 
   <h2 class="text-center">Dashboard of products</h2>
 
+  <div class="form-control">
+    <input type="text" placeholder="Поиск товара" [(ngModel)]="productName">
+  </div>
+
   <table>
     <thead>
     <tr>
@@ -14,11 +18,11 @@
     </thead>
 
     <tbody>
-    <tr *ngFor="let products of products; let idx = index">
+    <tr *ngFor="let products of products | search: productName; let idx = index">
       <td>{{idx+1}}</td>
       <td>{{products.title}}</td>
       <td>{{products.price}}</td>
-      <td>{{products.date| date:'medium'}}</td>
+      <td>{{products.date| date:'short'}}</td>
 
 
 
