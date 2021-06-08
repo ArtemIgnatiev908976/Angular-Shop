@@ -8,7 +8,7 @@ import { filter } from 'rxjs/operators';
 export class SortingPipe implements PipeTransform {
 
   transform(products: Product[], type=''): any {
-
+    if (!products.filter) return [];
     return products.filter(products=> {
       return products.type == type
     })
