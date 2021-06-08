@@ -1,4 +1,4 @@
-<div *ngIf="products.length; else loading">
+<div *ngIf="products.length; else loading" class="container">
 
   <h2 class="text-center">Dashboard of products</h2>
 
@@ -22,8 +22,11 @@
 
 
 
-      <td><button class="btn btn-dark" [routerLink]="['/admin','product', 'product.id', 'edit']">Open</button></td>
-      <td><button class="btn btn-danger" (click)="remove(products.id)" >Delete</button></td>
+      <td>
+        <button class="btn btn-dark" [routerLink]="['/admin','product', products.id, 'edit']">Open</button>
+        <button class="btn btn-danger" (click)="remove(products.id)" >Delete</button>
+      </td>
+
 
 
     </tr>
