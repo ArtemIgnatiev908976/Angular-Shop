@@ -14,7 +14,7 @@ export class CartPageComponent implements OnInit {
   totalPrice = 0
   form: FormGroup
   submitted = false
-
+  added = ''
 
   constructor(
     private productServ: ProductService,
@@ -56,6 +56,7 @@ export class CartPageComponent implements OnInit {
     console.log(this.form)
     this.orderServ.create(order).subscribe((res=>{
       this.form.reset()
+      this.added='Delivery is framed '
       this.submitted=false
 
     }))
